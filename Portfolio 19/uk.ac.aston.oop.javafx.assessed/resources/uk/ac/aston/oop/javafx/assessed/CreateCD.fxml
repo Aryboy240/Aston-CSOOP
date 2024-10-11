@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="TOP_CENTER" prefWidth="200.0" spacing="5.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uk.ac.aston.oop.javafx.assessed.CreateCDController">
+   <children>
+      <HBox alignment="CENTER_LEFT">
+         <children>
+            <Label text="Title:" />
+            <TextField fx:id="titleField" promptText="Enter title" />
+         </children>
+      </HBox>
+
+      <HBox alignment="CENTER_LEFT">
+         <children>
+            <Label text="Artist:" />
+            <TextField fx:id="artistField" promptText="Enter artist" />
+         </children>
+      </HBox>
+
+      <CheckBox fx:id="ownCheckBox" text="Own" />
+
+      <Label fx:id="playingTimeLabel" text="Playing time: 0" />
+      <Slider fx:id="playingTimeSlider" majorTickUnit="60.0" max="360.0" min="0" showTickLabels="true" showTickMarks="true" />
+
+      <Label fx:id="tracksLabel" text="Number of tracks: 0" />
+      <Slider fx:id="tracksSlider" majorTickUnit="5" max="40.0" min="0" showTickLabels="true" showTickMarks="true" />
+
+      <HBox alignment="CENTER" spacing="10.0" VBox.vgrow="ALWAYS">
+         <children>
+            <Button fx:id="createButton" mnemonicParsing="false" onAction="#createPressed" text="Create" />
+            <Button fx:id="cancelButton" mnemonicParsing="false" onAction="#cancelPressed" text="Cancel" />
+         </children>
+      </HBox>
+   </children>
+</VBox>
